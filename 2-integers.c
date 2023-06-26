@@ -31,11 +31,11 @@ return (digits);
  */
 int _printf(const char *format, ...)
 {
-int len = strlen(format);
+const char *ptr = format; 
+int counter = 0;
 va_list arguments;
 va_start(arguments, format);
-int counter = 0;
-for (const char *ptr = format; *ptr != '\0'; ptr++)
+for (ptr = format; *ptr != '\0'; ptr++)
 {
 if (*ptr == '%')
 {

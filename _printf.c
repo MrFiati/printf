@@ -45,26 +45,26 @@ int print_string(char *str)
 int _printf(const char *format, ...)
 {
 	va_list arguments;
-	int i, counter = 0;
+	int p, counter = 0;
 
 	va_start(arguments, format);
 
 	if (format == NULL)
 		return (-1);
 
-	for (i = 0; format[i] != '\0'; i++)
+	for (p = 0; format[p] != '\0'; i++)
 	{
-		if (format[i] != '%')
+		if (format[p] != '%')
 		{
 			_putchar(format[i]);
 			counter++;
 		}
 		else
 		{
-			if (format[i + 1] == '\0')
+			if (format[p + 1] == '\0')
 				return (-1);
 
-			counter = counter + _function(format[i + 1], arguments);
+			counter = counter + _function(format[p + 1], arguments);
 			i++;
 		}
 	}

@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * print_digit - Prints a decimal digit
+ * print_decimal - Prints a decimal digit
  * @arguments: Variable argument list
  *
  * Return: Number of characters printed

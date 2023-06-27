@@ -34,7 +34,7 @@ int print_decimal(va_list arguments)
 		digits = number / divisor;
 		_putchar('0' + digits);
 		counter++;
-		num %= divisor;
+		number %= divisor;
 		divisor /= 10;
 	}
 

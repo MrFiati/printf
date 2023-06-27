@@ -34,7 +34,6 @@ int print_string(char *str)
 	}
 	return (counter);
 }
-
 /**
  * _printf - this is printf function that we are creating
  * @format: pointer to char containing the text that we print

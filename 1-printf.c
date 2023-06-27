@@ -10,7 +10,7 @@
  */
 int print_char(char ch)
 {
-	putchar(ch);
+	_putchar(ch);
 	return (1);
 }
 
@@ -26,11 +26,37 @@ int print_string(char *str)
 
 	while (*str != '\0')
 	{
-		putchar(*str);
+		_putchar(*str);
 		counter++;
 		str++;
 	}
 	return (counter);
+}
+
+/**
+ * print_number - Prints an integer
+ * @n: The integer to print
+ *
+ * Return: Number of digits printed
+ */
+int print_number(int n)
+{
+	int digits = 0;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		digits++;
+		n = -n;
+	}
+
+	if (n / 10)
+		digits = digits + print_number(n / 10);
+
+	_putchar((n % 10) + '0');
+	digits++;
+
+	return (digits);
 }
 
 /**
@@ -62,6 +88,11 @@ int _printf(const char *format, ...)
 				char *str = va_arg(arguments, char *);
 				counter += print_string(str);
 			}
+			else if (*ptr == 'd' || *ptr == 'i')
+			{
+				int num = va_arg(arguments, int);
+				counter += print_number(num);
+			}
 			else if (*ptr == '%')
 			{
 				counter += print_char('%');
@@ -71,7 +102,6 @@ int _printf(const char *format, ...)
 				counter += print_char('%');
 				counter += print_char(*ptr);
 			}
-
 		}
 		else
 		{

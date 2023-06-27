@@ -29,7 +29,7 @@ return (digits);
  *
  * Return: Number of characters printed
  */
-int _printf(const char *format, ...)
+int _printf2(const char *format, ...)
 {
 const char *ptr = format;
 int counter = 0;

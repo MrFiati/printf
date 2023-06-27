@@ -3,81 +3,96 @@
 #include "main.h"
 
 /**
- * print_char - Prints a single character
- * @ch: The character to print
+ * _putchar - Prints a single character to stdout
+ * @c: The character to print
  *
- * Return: Number of characters printed (always 1)
+ * Return: On success, returns the number of characters printed.
+ * On error, returns -1 and sets errno appropriately.
  */
-int print_char(char ch)
+int _putchar(char c)
 {
-	putchar(ch);
-	return (1);
+	return putchar(c);
 }
 
 /**
  * print_string - Prints a string
  * @str: The string to print
  *
- * Return: Number of characters printed
+ * Return: The number of characters printed
  */
 int print_string(char *str)
 {
 	int counter = 0;
 
-	while (*str != '\0')
+	while (*str)
 	{
-		putchar(*str);
+		_putchar(*str);
 		counter++;
 		str++;
 	}
-	return (counter);
+
+	return counter;
 }
 
 /**
  * _printf - Custom printf function implementation
  * @format: Format string containing the text to be printed
  *
- * Return: Number of characters printed
+ * Return: The number of characters printed (excluding the null byte)
  */
 int _printf(const char *format, ...)
 {
-	const char *ptr = format;
-	int counter = 0;
 	va_list arguments;
+	int counter = 0;
 
 	va_start(arguments, format);
 
-	for (ptr = format; *ptr != '\0'; ptr++)
+	while (*format)
 	{
-		if (*ptr == '%')
+		if (*format == '%')
 		{
-			ptr++;
-			if (*ptr == 'c')
+			format++;
+
+			if (*format == 'c')
 			{
 				int ch = va_arg(arguments, int);
-				counter += print_char(ch);
+				_putchar(ch);
+				counter++;
 			}
-			else if (*ptr == 's')
+			else if (*format == 's')
 			{
 				char *str = va_arg(arguments, char *);
-				counter += print_string(str);
+				if (str != NULL)
+					counter += print_string(str);
+				else
+					counter += print_string("(null)");
 			}
-			else if (*ptr == '%')
+			else if (*format == '%')
 			{
-				counter += print_char('%');
+				_putchar('%');
+				counter++;
 			}
 			else
 			{
-				counter += print_char('%');
-				counter += print_char(*ptr);
+				_putchar('%');
+				_putchar(*format);
+				counter += 2;
 			}
-
 		}
 		else
 		{
-			counter += print_char(*ptr);
+			_putchar(*format);
+			counter++;
 		}
+
+		format++;
 	}
+
+	va_end(arguments);
+
+	return counter;
+}
+
 
 	va_end(arguments);
 	return (counter);

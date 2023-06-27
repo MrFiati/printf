@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include "main.h"
 /**
  * print_char - Prints a single character
  * @data: The printf_data struct containing the format and arguments

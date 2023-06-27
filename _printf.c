@@ -56,7 +56,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[p] != '%')
 		{
-			_putchar(format[i]);
+			_putchar(format[p]);
 			counter++;
 		}
 		else
@@ -65,7 +65,7 @@ int _printf(const char *format, ...)
 				return (-1);
 
 			counter = counter + _function(format[p + 1], arguments);
-			i++;
+			p++;
 		}
 	}
 

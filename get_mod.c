@@ -4,7 +4,7 @@
  * print_percent - this function print percent 
  * @arguments: Variable arguments list
  *
- * Return: Number of characters printed (always 1)
+ * Return: it always print 1
  */
 int print_percent(va_list arguments)
 {

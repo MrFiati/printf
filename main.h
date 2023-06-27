@@ -6,8 +6,8 @@
 /* Struct to hold format and variable arguments */
 typedef struct print_function
 {
-    char specifier;
-    int (*function)(va_list);
+char specifier;
+int (*function)(va_list);
 } print_function_t;
 
 /* Function prototypes */

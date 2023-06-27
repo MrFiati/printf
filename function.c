@@ -8,7 +8,7 @@
  *
  * Return: The count of characters printed.
  */
-int _function(char specifier, va_list args)
+int _function(char specifier, va_list arguments)
 {
     print_function_t functions[] = {{'c', print_characters},{'s', print_strings},{'%', print_percent},{'d', print_decimal},{'i', print_decimal},{0, NULL}};
 

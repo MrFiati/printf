@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stddef.h>
-
 /**
  * _function - this function select the matching function to specifier
  *

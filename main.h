@@ -2,12 +2,21 @@
 #define MAIN_H
 
 #include <stdarg.h>
-#include <unistd.h>
 
-int _putchar(char c);
+/* Struct to hold format and variable arguments */
+typedef struct printf_data
+{
+    const char *format;
+    va_list args;
+    int count;
+} printf_data;
+
+/* Function prototypes */
 int _printf(const char *format, ...);
-int print_numbers(int n);
-int print_char(char ch);
-int print_string(char *str);
+int _putchar(char c);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_percent(va_list args);
+int print_digit(va_list args);
 
-#endif
+#endif /* MAIN_H */

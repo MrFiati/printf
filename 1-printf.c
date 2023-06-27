@@ -10,7 +10,7 @@
  */
 int print_char(char ch)
 {
-	putchar(ch);
+	_putchar(ch);
 	return (1);
 }
 
@@ -26,7 +26,7 @@ int print_string(char *str)
 
 	while (*str != '\0')
 	{
-		putchar(*str);
+		_putchar(*str);
 		counter++;
 		str++;
 	}

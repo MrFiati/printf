@@ -37,7 +37,7 @@ int print_string(char *str)
 
 /**
  * _printf - this is printf function that we are creating
- * @format: Format string containing the text to be printed
+ * @format: pointer to char containing the text that we print
  * @...: Variable arguments to be printed according to the format
  *
  * Return: Number of characters printed

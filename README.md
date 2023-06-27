@@ -16,5 +16,6 @@ This file contains the implementation of the print_decimal function, which handl
 This file contains the implementation of the print_strings function, which handles the printing of strings. It takes a variable argument list and retrieves a string argument. If the string is NULL, it is set to "(null)". The function then iterates over each character in the string and prints it using the _putchar function. The count of characters printed is !
 5. File: main.h
 This header file contains function prototypes, typedefs, and the print_function_t structure definition used in the other source files. It also includes the necessary standard library headers and the stdarg.h header for variable argument handling.
+ 6.
 
 

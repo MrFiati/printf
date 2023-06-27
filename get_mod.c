@@ -1,7 +1,7 @@
 #include "main.h"
 #include <unistd.h>
 /**
- * print_percent - this function print percent 
+ * print_percent - this function print percent
  * @arguments: Variable arguments list
  *
  * Return: it always print 1

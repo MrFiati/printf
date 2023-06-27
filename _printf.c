@@ -56,13 +56,11 @@ int _printf(const char *format, ...)
 			{
 				int ch = va_arg(arguments, int);
 				counter += print_char(ch);
-
 			}
 			else if (*ptr == 's')
 			{
 				char *str = va_arg(arguments, char *);
 				counter += print_string(str);
-
 			}
 			else if (*ptr == '%')
 			{
@@ -74,6 +72,7 @@ int _printf(const char *format, ...)
 				counter += print_char(*ptr);
 			}
 
+			/* Add a blank line here */
 		}
 		else
 		{

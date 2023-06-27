@@ -21,7 +21,7 @@ int f;
 for (f = 0; functions[f].specifier; f++)
 {
 if (specifier == functions[f].specifier)
-return (functions[i].function(arguments));
+return (functions[f].function(arguments));
 }
 _putchar('%');
 _putchar(specifier);

@@ -18,7 +18,7 @@ print_function_t functions[] = {{'c', print_characters},
 {'i', print_decimal},
 {0, NULL}};
 int f;
-for (i = 0; functions[f].specifier; i++)
+for (f = 0; functions[f].specifier; i++)
 {
 if (specifier == functions[f].specifier)
 return (functions[i].function(arguments));

@@ -16,7 +16,7 @@ int _function(char specifier, va_list arguments)
     for (int i = 0; functions[i].specifier; i++)
     {
         if (specifier == functions[i].specifier)
-            return functions[i].function(args);
+            return functions[i].function(arguments);
     }
 
     _putchar('%');

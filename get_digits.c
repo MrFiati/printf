@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "main.h"
 /**
  * print_digit - Prints a decimal digit

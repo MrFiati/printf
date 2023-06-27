@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdarg.h>
-typedef struct printf_data 
+typedef struct printf_data
 {
 const char *format;
 va_list args;

@@ -52,7 +52,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	for (p = 0; format[p] != '\0'; i++)
+	for (p = 0; format[p] != '\0'; p++)
 	{
 		if (format[p] != '%')
 		{

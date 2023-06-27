@@ -2,9 +2,9 @@
 #include <stddef.h>
 
 /**
- * _function - Selects the appropriate function based on the specifier.
+ * _function - this function select the matching function to specifier
  *
- * @specifier: The conversion specifier.
+ * @specifier: The specifier.
  * @arguments: The argument list.
  *
  * Return: The count of characters printed.

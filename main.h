@@ -2,15 +2,17 @@
 #define MAIN_H
 
 #include <stdarg.h>
-
-/* Struct to hold format and variable arguments */
+/**
+ * struct print_function - Holds format specifier and corresponding function pointer
+ * @specifier: The conversion specifier
+ * @function: Pointer to the function that handles the conversion specifier
+ */
 typedef struct print_function
 {
 char specifier;
 int (*function)(va_list);
 } print_function_t;
 
-/* Function prototypes */
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_characters(va_list arguments);

@@ -17,9 +17,9 @@ int print_char(char ch)
 
 /**
  * print_string - this function is used to print a string
- * @str: The string to print
+ * @str: The string that we gonna print
  *
- * Return: Number of characters printed
+ * Return: Number of characters we printed
  */
 
 int print_string(char *str)

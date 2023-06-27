@@ -3,10 +3,10 @@
 #include "main.h"
 
 /**
- * print_char - Prints a single character
- * @ch: The character to print
+ * print_char - this function is used to print a charchter
+ * @ch: The character that we gonna print
  *
- * Return: Number of characters printed
+ * Return: Number of characters we printed
  */
 
 int print_char(char ch)

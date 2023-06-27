@@ -1,8 +1,8 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * print_decimal - Prints a decimal digit
- * @arguments: Variable argument list
+ * print_decimal - this funcrion prints a decimal digit
+ * @arguments: Variable arguments list
  *
  * Return: Number of characters printed
  */

@@ -71,6 +71,7 @@ int _printf(const char *format, ...)
 				counter += print_char('%');
 				counter += print_char(*ptr);
 			}
+			
 		}
 		else
 		{

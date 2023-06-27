@@ -56,7 +56,6 @@ int _printf(const char *format, ...)
 			{
 				int ch = va_arg(arguments, int);
 				counter += print_char(ch);
-
 			}
 			else if (*ptr == 's')
 			{
@@ -73,6 +72,7 @@ int _printf(const char *format, ...)
 				counter += print_char(*ptr);
 			}
 
+			/* Add a blank line here */
 		}
 		else
 		{

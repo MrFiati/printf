@@ -1,5 +1,5 @@
-#include <stddef.h>
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _function - Selects the appropriate function based on the specifier.

@@ -2,13 +2,13 @@
 #include "main.h"
 /**
  * print_characters - Prints a single character
- * @args: Variable argument list
+ * @arguments: Variable argument list
  *
  * Return: Number of characters printed (always 1)
  */
-int print_characters(va_list args)
+int print_characters(va_list arguments)
 {
-	int ch = va_arg(args, int);
+	int ch = va_arg(arguments, int);
 
 	_putchar(ch);
 

@@ -3,6 +3,7 @@
 #include "main.h"
 
 /**
+<<<<<<< HEAD
  * print_char - Prints a single character
  * @ch: The character to print
  *
@@ -36,48 +37,38 @@ int print_string(char *str)
 }
 
 /**
+=======
+>>>>>>> ca66e373f7fde1b184fd867b5d8da4005ff6a11e
  * _printf - Custom printf function implementation
  * @format: Format string containing the text to be printed
+ * @...: Variable arguments to be printed according to the format
  *
  * Return: Number of characters printed
  */
 int _printf(const char *format, ...)
 {
-	const char *ptr = format;
-	int counter = 0;
 	va_list arguments;
+	int i, counter = 0;
 
 	va_start(arguments, format);
 
-	for (ptr = format; *ptr != '\0'; ptr++)
-	{
-		if (*ptr == '%')
-		{
-			ptr++;
-			if (*ptr == 'c')
-			{
-				int ch = va_arg(arguments, int);
-				counter += print_char(ch);
-			}
-			else if (*ptr == 's')
-			{
-				char *str = va_arg(arguments, char *);
-				counter += print_string(str);
-			}
-			else if (*ptr == '%')
-			{
-				counter += print_char('%');
-			}
-			else
-			{
-				counter += print_char('%');
-				counter += print_char(*ptr);
-			}
+	if (format == NULL)
+		return (-1);
 
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		if (format[i] != '%')
+		{
+			_putchar(format[i]);
+			counter++;
 		}
 		else
 		{
-			counter += print_char(*ptr);
+			if (format[i + 1] == '\0')
+				return (-1);
+
+			counter += _function(format[i + 1], arguments);
+			i++;
 		}
 	}
 

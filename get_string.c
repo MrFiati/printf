@@ -2,11 +2,11 @@
 #include <unistd.h>
 #include <stdarg.h>
 /**
- * print_strings - print string.
+ * print_strings - this function prints strings
  *
- * @arguments: argument.
+ * @arguments: arguments list
  *
- * Return: character count.
+ * Return: we return number of charachter counted
  */
 int print_strings(va_list arguments)
 {

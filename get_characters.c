@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include "main.h"
+
 /**
  * print_characters - this function prints one char
  * @arguments: Variable arguments list

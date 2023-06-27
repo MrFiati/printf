@@ -12,8 +12,8 @@
 int _function(char specifier, va_list arguments)
 {
     print_function_t functions[] = {{'c', print_characters},{'s', print_strings},{'%', print_percent},{'d', print_decimal},{'i', print_decimal},{0, NULL}};
-
-    for (int i = 0; functions[i].specifier; i++)
+int i;
+    for (i = 0; functions[i].specifier; i++)
     {
         if (specifier == functions[i].specifier)
             return functions[i].function(arguments);

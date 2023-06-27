@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_digit - Prints a decimal digit
- * @args: Variable argument list
+ * @arguments: Variable argument list
  *
  * Return: Number of characters printed
  */

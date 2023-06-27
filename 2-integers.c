@@ -31,7 +31,7 @@ return (digits);
  */
 int _printf(const char *format, ...)
 {
-const char *ptr = format; 
+const char *ptr = format;
 int counter = 0;
 va_list arguments;
 va_start(arguments, format);

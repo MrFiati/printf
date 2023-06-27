@@ -12,9 +12,9 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i, count = 0;
+	int i, counter = 0;
 
-	va_start(args, format);
+	va_start(arguments, format);
 
 	if (format == NULL)
 		return (-1);
@@ -24,18 +24,18 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
-			count++;
+			counter++;
 		}
 		else
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
 
-			count += _function(format[i + 1], args);
+			counter += _function(format[i + 1], arguments);
 			i++;
 		}
 	}
 
-	va_end(args);
-	return (count);
+	va_end(arguments);
+	return (counter);
 }

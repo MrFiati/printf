@@ -5,7 +5,7 @@
 /**
  * struct print_function - this typedef struct Holds format specifier
  * @specifier: The conversion specifier
- * @function: Pointer to the function that handles the conversion specifier
+ * @function: the is pointer to the function that handles the conversion specifier
  */
 typedef struct print_function
 {

@@ -4,7 +4,7 @@
 /**
  * _function - this function select the matching function to specifier
  *
- * @specifier: The specifier.
+ * @specifier: The specifier that converse.
  * @arguments: The argument list.
  *
  * Return: The count of characters printed.
@@ -17,10 +17,10 @@ print_function_t functions[] = {{'c', print_characters},
 {'d', print_decimal},
 {'i', print_decimal},
 {0, NULL}};
-int i;
-for (i = 0; functions[i].specifier; i++)
+int f;
+for (i = 0; functions[f].specifier; i++)
 {
-if (specifier == functions[i].specifier)
+if (specifier == functions[f].specifier)
 return (functions[i].function(arguments));
 }
 _putchar('%');

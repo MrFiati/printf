@@ -3,7 +3,7 @@
 
 #include <stdarg.h>
 /**
- * struct print_function - Holds format specifier
+ * struct print_function - this typedef struct Holds format specifier
  * @specifier: The conversion specifier
  * @function: Pointer to the function that handles the conversion specifier
  */

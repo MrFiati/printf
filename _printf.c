@@ -38,9 +38,9 @@ int print_string(char *str)
 /**
  * _printf - this is printf function that we are creating
  * @format: pointer to char containing the text that we print
- * @...: Variable arguments to be printed according to the format
+ * @...: Variable arguments
  *
- * Return: Number of characters printed
+ * Return: Number of characters we printed
  */
 int _printf(const char *format, ...)
 {

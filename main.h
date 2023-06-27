@@ -17,5 +17,6 @@ int print_characters(va_list arguments);
 int print_strings(va_list arguments);
 int print_percent(va_list arguments);
 int print_decimal(va_list arguments);
+int _function(char specifier, va_list arguments);
 
 #endif /* MAIN_H */

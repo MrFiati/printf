@@ -5,6 +5,12 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdarg.h>
+/**
+ * struct printf_data - Data structure for printf function
+ * @format: The format string
+ * @args: The va_list of arguments
+ * @count: The count of characters printed
+ */
 typedef struct printf_data
 {
 const char *format;

@@ -3,96 +3,81 @@
 #include "main.h"
 
 /**
- * _putchar - Prints a single character to stdout
- * @c: The character to print
+ * print_char - Prints a single character
+ * @ch: The character to print
  *
- * Return: On success, returns the number of characters printed.
- * On error, returns -1 and sets errno appropriately.
+ * Return: Number of characters printed (always 1)
  */
-int _putchar(char c)
+int print_char(char ch)
 {
-	return putchar(c);
+	putchar(ch);
+	return (1);
 }
 
 /**
  * print_string - Prints a string
  * @str: The string to print
  *
- * Return: The number of characters printed
+ * Return: Number of characters printed
  */
 int print_string(char *str)
 {
 	int counter = 0;
 
-	while (*str)
+	while (*str != '\0')
 	{
-		_putchar(*str);
+		putchar(*str);
 		counter++;
 		str++;
 	}
-
-	return counter;
+	return (counter);
 }
 
 /**
  * _printf - Custom printf function implementation
  * @format: Format string containing the text to be printed
  *
- * Return: The number of characters printed (excluding the null byte)
+ * Return: Number of characters printed
  */
 int _printf(const char *format, ...)
 {
-	va_list arguments;
+	const char *ptr = format;
 	int counter = 0;
+	va_list arguments;
 
 	va_start(arguments, format);
 
-	while (*format)
+	for (ptr = format; *ptr != '\0'; ptr++)
 	{
-		if (*format == '%')
+		if (*ptr == '%')
 		{
-			format++;
-
-			if (*format == 'c')
+			ptr++;
+			if (*ptr == 'c')
 			{
 				int ch = va_arg(arguments, int);
-				_putchar(ch);
-				counter++;
+				counter += print_char(ch);
 			}
-			else if (*format == 's')
+			else if (*ptr == 's')
 			{
 				char *str = va_arg(arguments, char *);
-				if (str != NULL)
-					counter += print_string(str);
-				else
-					counter += print_string("(null)");
+				counter += print_string(str);
 			}
-			else if (*format == '%')
+			else if (*ptr == '%')
 			{
-				_putchar('%');
-				counter++;
+				counter += print_char('%');
 			}
 			else
 			{
-				_putchar('%');
-				_putchar(*format);
-				counter += 2;
+				counter += print_char('%');
+				counter += print_char(*ptr);
 			}
+
 		}
 		else
 		{
-			_putchar(*format);
-			counter++;
+			counter += print_char(*ptr);
 		}
-
-		format++;
 	}
-
-	va_end(arguments);
-
-	return counter;
-}
-
 
 	va_end(arguments);
 	return (counter);

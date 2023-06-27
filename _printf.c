@@ -72,7 +72,6 @@ int _printf(const char *format, ...)
 				counter += print_char(*ptr);
 			}
 
-			/* Add a blank line here */
 		}
 		else
 		{

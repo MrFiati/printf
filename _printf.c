@@ -36,7 +36,7 @@ int print_string(char *str)
 }
 
 /**
- * _printf - Custom printf function implementation
+ * _printf - this is printf function that we are creating
  * @format: Format string containing the text to be printed
  * @...: Variable arguments to be printed according to the format
  *

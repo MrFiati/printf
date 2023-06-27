@@ -4,12 +4,11 @@
 #include <stdarg.h>
 
 /* Struct to hold format and variable arguments */
-typedef struct printf_data
+typedef struct print_function
 {
-	const char *format;
-	va_list arguments;
-	int count;
-} printf_data;
+    char specifier;
+    int (*function)(va_list);
+} print_function_t;
 
 /* Function prototypes */
 int _printf(const char *format, ...);

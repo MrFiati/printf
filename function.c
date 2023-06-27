@@ -5,7 +5,7 @@
  * _function - Selects the appropriate function based on the specifier.
  *
  * @specifier: The conversion specifier.
- * @args: The argument list.
+ * @arguments: The argument list.
  *
  * Return: The count of characters printed.
  */

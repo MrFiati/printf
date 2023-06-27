@@ -11,7 +11,7 @@
 
 int print_char(char ch)
 {
-	putchar(ch);
+	_putchar(ch);
 	return (1);
 }
 

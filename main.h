@@ -7,9 +7,9 @@
 #include <stdarg.h>
 typedef struct printf_data 
 {
-    const char *format;
-    va_list args;
-    int count;
+const char *format;
+va_list args;
+int count;
 } printf_data;
 
 int print_char(printf_data *data);

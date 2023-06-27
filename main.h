@@ -14,7 +14,7 @@ typedef struct print_function
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_characters(va_list arguments);
-int print_string(va_list arguments);
+int print_strings(va_list arguments);
 int print_percent(va_list arguments);
 int print_decimal(va_list arguments);
 

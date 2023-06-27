@@ -2,9 +2,9 @@
 #include <unistd.h>
 /**
  * print_percent - this function print percent
- * @arguments: Variable arguments list
+ * @arguments: variable arguments list
  *
- * Return: it always print 1
+ * Return: it always prints 1
  */
 int print_percent(va_list arguments)
 {

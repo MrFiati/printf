@@ -66,7 +66,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '\0')
 				return (-1);
 
-			counter += _function(format[i + 1], arguments);
+			counter = _function(format[i + 1], arguments);
 			i++;
 		}
 	}

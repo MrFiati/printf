@@ -37,7 +37,6 @@ int print_string(char *str)
 
 /**
 =======
->>>>>>> ca66e373f7fde1b184fd867b5d8da4005ff6a11e
  * _printf - Custom printf function implementation
  * @format: Format string containing the text to be printed
  * @...: Variable arguments to be printed according to the format

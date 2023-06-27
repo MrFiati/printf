@@ -3,7 +3,6 @@
 /**
  * print_decimal - this funcrion prints a decimal digit
  * @arguments: Variable arguments list
- *
  * Return: Number of characters we printed
  */
 int print_decimal(va_list arguments)

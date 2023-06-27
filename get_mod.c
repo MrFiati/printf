@@ -10,5 +10,5 @@ int print_percent(va_list arguments)
 {
 (void)arguments;
 _putchar('%');
-    return (1);
+return (1);
 }

@@ -31,6 +31,7 @@
 	unsigned int width;
 	unsigned int precision;
 
+<<<<<<< HEAD
 	unsigned int h_modifier		: 1;
 	unsigned int l_modifier		: 1;
 } params_t;
@@ -48,7 +49,11 @@ typedef struct specifier
 } specifier_t;
 
 /* _prinf.c module */
+=======
+int print_number(int n);
+>>>>>>> 0a67496ce17ed50a7feb31f261711cf243b9b188
 int _printf(const char *format, ...);
+int _putchar(char c);
 
 /* _put.c module */
 int _puts(char *str);

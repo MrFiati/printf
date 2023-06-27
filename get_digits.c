@@ -31,7 +31,7 @@ int print_decimal(va_list arguments)
 
 	while (divisor != 0)
 	{
-		digits = num / divisor;
+		digits = number / divisor;
 		_putchar('0' + digits);
 		counter++;
 		num %= divisor;

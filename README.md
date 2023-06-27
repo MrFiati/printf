@@ -18,5 +18,3 @@ This header file contains function prototypes, typedefs, and the print_function_
 
 7.File: get_characters.c
 This file contains the implementation of the print_characters function, which handles the printing of single characters. It takes a variable argument list and retrieves an integer argument representing the character. The function simply calls the _putchar function to print the character, and always returns 1.
-
-

@@ -5,9 +5,9 @@
  * _function - this function select the matching function to specifier
  *
  * @specifier: The specifier that converse.
- * @arguments: The argument list.
+ * @arguments: The argument list
  *
- * Return: The count of characters printed.
+ * Return: The count of characters printed
  */
 int _function(char specifier, va_list arguments)
 {

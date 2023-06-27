@@ -23,7 +23,7 @@ int print_decimal(va_list arguments)
 	{
 		_putchar('-');
 		counter++;
-		number = -num;
+		number = -number;
 	}
 
 	while (num / divisor > 9)

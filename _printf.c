@@ -6,7 +6,7 @@
  * print_char - Prints a single character
  * @ch: The character to print
  *
- * Return: Number of characters printed (always 1)
+ * Return: Number of characters printed
  */
 
 int print_char(char ch)

@@ -1,23 +1,27 @@
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 #include "main.h"
+
 /**
  * print_char - Prints a single character
  * @ch: The character to print
  *
  * Return: Number of characters printed (always 1)
  */
+
 int print_char(char ch)
 {
 	putchar(ch);
 	return (1);
 }
+
 /**
  * print_string - Prints a string
  * @str: The string to print
  *
  * Return: Number of characters printed
  */
+
 int print_string(char *str)
 {
 	int counter = 0;

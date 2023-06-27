@@ -62,7 +62,6 @@ int _printf(const char *format, ...)
 			{
 				char *str = va_arg(arguments, char *);
 				counter += print_string(str);
-
 			}
 			else if (*ptr == '%')
 			{

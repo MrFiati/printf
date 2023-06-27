@@ -3,7 +3,6 @@
 #include "main.h"
 
 /**
-<<<<<<< HEAD
  * print_char - Prints a single character
  * @ch: The character to print
  *
@@ -29,7 +28,7 @@ int print_string(char *str)
 
 	while (*str != '\0')
 	{
-		putchar(*str);
+		_putchar(*str);
 		counter++;
 		str++;
 	}

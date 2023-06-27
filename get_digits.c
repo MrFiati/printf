@@ -8,18 +8,18 @@
  */
 int print_decimal(va_list arguments)
 {
-	int num = va_arg(arguments, int);
+	int number = va_arg(arguments, int);
 	int counter = 0;
 	int digits = 0;
 	int divisor = 1;
 
-	if (num == 0)
+	if (number == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
 
-	if (num < 0)
+	if (number < 0)
 	{
 		_putchar('-');
 		counter++;

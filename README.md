@@ -17,4 +17,4 @@ This file contains the implementation of the print_strings function, which handl
 This header file contains function prototypes, typedefs, and the print_function_t structure definition used in the other source files. It also includes the necessary standard library headers and the stdarg.h header for variable argument handling.
 
 7. File: get_characters.c
-This file contains the implementation of the print_characters function, which handles the printing of single characters. It takes a variable argument list and retrieves an integer argument representing the character. The function simply calls the _putchar function to print the character, and always returns 1.
+This file contains the implementation of the print_characters function, which handles the printing of single characters. It takes a variable argument list and retrieves an integer argument representing the character.The function simply calls the _putchar function to print the character, and always returns 1.

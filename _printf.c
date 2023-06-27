@@ -34,6 +34,7 @@ int print_string(char *str)
 	}
 	return (counter);
 }
+
 /**
  * _printf - Custom printf function implementation
  * @format: Format string containing the text to be printed
@@ -49,39 +50,37 @@ int _printf(const char *format, ...)
 	va_start(arguments, format);
 
 	for (ptr = format; *ptr != '\0'; ptr++)
+	{
 		if (*ptr == '%')
-	{
-		ptr++;
-		if (*ptr == 'c')
-	{
-		int ch = va_arg(arguments, int);
-
-		counter += print_char(ch);
-	}
-		else if (*ptr == 's')
-	{
-		char *str = va_arg(arguments, char *);
-
-		if (str != NULL)
 		{
-			counter += print_string(str);
+			ptr++;
+			if (*ptr == 'c')
+			{
+				int ch = va_arg(arguments, int);
+				counter += print_char(ch);
+			}
+			else if (*ptr == 's')
+			{
+				char *str = va_arg(arguments, char *);
+				counter += print_string(str);
+			}
+			else if (*ptr == '%')
+			{
+				counter += print_char('%');
+			}
+			else
+			{
+				counter += print_char('%');
+				counter += print_char(*ptr);
+			}
+
 		}
-	}
-	else if (*ptr == '%')
-	{
-	counter += print_char('%');
-	}
 		else
 		{
-		counter += print_char('%');
-		counter += print_char(*ptr);
+			counter += print_char(*ptr);
 		}
 	}
-	else
-	{
-	counter += print_char(*ptr);
-	}
-}
+
 	va_end(arguments);
 	return (counter);
 }

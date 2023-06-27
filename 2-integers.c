@@ -51,11 +51,6 @@ _putchar(*ptr);
 counter++;
 }
 }
-else
-{
-_putchar(*ptr);
-counter++;
-}
 }
 va_end(arguments);
 return (counter);

@@ -3,7 +3,6 @@
 #include <stdarg.h>
 /**
  * print_strings - this function prints strings
- *
  * @arguments: arguments list
  *
  * Return: we return number of charachter counted

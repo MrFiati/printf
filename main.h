@@ -8,6 +8,7 @@
 
 #define BUFSIZE 1024
 
+int print_number(int n);
 int _printf(const char *format, ...);
 int _putchar(char c);
 

@@ -1,49 +1,83 @@
+#include <stdio.h>
+#include <stdarg.h>
 #include "main.h"
-
 /**
- * _printf - prints anything
- * @format: the format string
+ * print_char - Prints a single character
+ * @ch: The character to print
  *
- * Return: number of bytes printed
+ * Return: Number of characters printed (always 1)
+ */
+int print_char(char ch)
+{
+	putchar(ch);
+	return (1);
+}
+/**
+ * print_string - Prints a string
+ * @str: The string to print
+ *
+ * Return: Number of characters printed
+ */
+int print_string(char *str)
+{
+	int counter = 0;
+
+	while (*str != '\0')
+	{
+		putchar(*str);
+		counter++;
+		str++;
+	}
+	return (counter);
+}
+/**
+ * _printf - Custom printf function implementation
+ * @format: Format string containing the text to be printed
+ *
+ * Return: Number of characters printed
  */
 int _printf(const char *format, ...)
 {
-	int sum = 0;
-	va_list ap;
-	char *p, *start;
-	params_t params = PARAMS_INIT;
+	const char *ptr = format;
+	int counter = 0;
+	va_list arguments;
 
-	va_start(ap, format);
+	va_start(arguments, format);
 
-	if (!format || (format[0] == '%' && !format[1]))
-		return (-1);
-	if (format[0] == '%' && format[1] == ' ' && !format[2])
-		return (-1);
-	for (p = (char *)format; *p; p++)
+	for (ptr = format; *ptr != '\0'; ptr++)
 	{
-		init_params(&params, ap);
-		if (*p != '%')
-		{
-			sum += _putchar(*p);
-			continue;
-		}
-		start = p;
-		p++;
-		while (get_flag(p, &params)) /* while char at p is flag char */
-		{
-			p++; /* next char */
-		}
-		p = get_width(p, &params, ap);
-		p = get_precision(p, &params, ap);
-		if (get_modifier(p, &params))
-			p++;
-		if (!get_specifier(p))
-			sum += print_from_to(start, p,
-				params.l_modifier || params.h_modifier ? p - 1 : 0);
-		else
-			sum += get_print_func(p, ap, &params);
+		if (*ptr == '%')
 	}
-	_putchar(BUF_FLUSH);
-	va_end(ap);
-	return (sum);
+	{
+		ptr++;
+            if (*ptr == 'c')
+            {
+                int ch = va_arg(arguments, int);
+                counter += print_char(ch);
+            }
+            else if (*ptr == 's')
+            {
+                char *str = va_arg(arguments, char *);
+                if (str != NULL)
+                {
+                    counter += print_string(str);
+                }
+            }
+            else if (*ptr == '%')
+            {
+                counter += print_char('%');
+            }
+            else
+            {
+                counter += print_char('%');
+                counter += print_char(*ptr);
+            }
+        }
+        else
+        {
+            counter += print_char(*ptr);
+        }
+    }
+    va_end(arguments);
+    return counter;
 }

@@ -11,7 +11,11 @@
  */
 int _function(char specifier, va_list arguments)
 {
-    print_function_t functions[] = {{'c', print_characters},{'s', print_strings},{'%', print_percent},{'d', print_decimal},{'i', print_decimal},{0, NULL}};
+    print_function_t functions[] = {{'c', print_characters},
+    {'s', print_strings},
+    {'%', print_percent},
+    {'d', print_decimal},
+    {'i', print_decimal},{0, NULL}};
 int i;
     for (i = 0; functions[i].specifier; i++)
     {
